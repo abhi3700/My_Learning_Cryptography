@@ -44,7 +44,7 @@ In this, any message before sending is encrypted by sender using his **public-ke
 ![http_%2F%2Fmashable.com%2Fwp-content%2Fuploads%2F2014%2F11%2Fwhatsapp-message-kari.png](https://res.cloudinary.com/hpiynhbhq/image/upload/v1512306501/zydq664ppc1zoc4xtmlc.png)
 
 ## Difference
-**Hashing ** -  non-retrievable input, used for storing and comparison.
+**Hashing** -  non-retrievable input, used for storing and comparison.
 **Encryption** - retrievable input, used where the input is to be read by the receiver e.g. Chat Apps.
 
 That's all.
