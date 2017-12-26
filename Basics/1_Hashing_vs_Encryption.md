@@ -33,9 +33,9 @@ E.g. of hash function - MD5, SHA-1, SHA-2 (mostly used), etc.
 A technique where an input is converted into an unreadable output of any length. 
 Here, the input is retrievable through decryption using key.
 
-**Types **- Symmetric & Assymetric.
+**Types**- Symmetric & Assymetric.
 **Symmetric** - The keys for encryption and decryption.
-**Assymetric ** - 2 different keys. **Public key** for encryption and **Private key** for decryption.
+**Assymetric** - 2 different keys. **Public key** for encryption and **Private key** for decryption.
 
 #### Application - 
 It is used where any information is supposed to be retrieved by the receiver.
