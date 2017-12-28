@@ -117,7 +117,3 @@ That's all for now.
 * (Tool) PyCryptodome: A fork of PyCrypto (after version 2.6.1) - [Github](https://github.com/Legrandin/pycryptodome), [Website](https://pycryptodome.readthedocs.io/en/latest/) . Read the [blog](https://blog.sqreen.io/stop-using-pycrypto-use-pycryptodome/) which recommends using the new library as the old one is prone to hacking.
 * Cryptographic Services with Python - https://docs.python.org/3/library/crypto.html
 * Python 3: An Intro to Encryption - https://www.blog.pythonlibrary.org/2016/05/18/python-3-an-intro-to-encryption/
-* 
-
-
-
