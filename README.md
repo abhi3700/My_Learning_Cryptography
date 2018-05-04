@@ -18,4 +18,5 @@ Learn about cryptography concepts - Both basics and core covered here.
 ## Resources
 * (Blog) Useful Cryptography Resources - https://blog.cryptographyengineering.com/useful-cryptography-resources/
 * (Blog) RSA Algorithm in Cryptography - https://www.geeksforgeeks.org/rsa-algorithm-cryptography/
+* (Blog) Adding salt to Hashing - https://auth0.com/blog/adding-salt-to-hashing-a-better-way-to-store-passwords/
 
