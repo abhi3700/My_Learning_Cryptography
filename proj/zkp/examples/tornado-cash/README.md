@@ -81,8 +81,3 @@ Now, from withdrawer's perspective, zk-SNARKs would help us to prove that the 3r
 
 - [Tornado Cash - How it Works | DeFi + Zero Knowledge Proof](https://www.youtube.com/watch?v=z_cRicXX1jI) ✅
 - [DeFi MOOC Lecture 10: Privacy on the Blockchain](https://www.youtube.com/watch?v=rIK5np0V6P0&list=PLS01nW3RtgorEzMOg2dpg7KwB5nhQHhSw)
-
-### Non-technical
-
-- [What to know about Zero Knowledge | Devcon Bogotá](https://www.youtube.com/watch?v=hBupNf1igbY)
-- [Designing Public Goods Using ZKPs by Rachel | Devcon Bogotá](https://www.youtube.com/watch?v=qWcU2saOlw4)

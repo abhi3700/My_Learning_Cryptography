@@ -1,3 +1,5 @@
+# Hashing vs Encryption
+
 ![learn cryptography.png](https://res.cloudinary.com/hpiynhbhq/image/upload/v1512301517/cl0gboe9cwzirgy7rjmy.png)
 
 Hey Guys!!....
