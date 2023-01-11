@@ -10,8 +10,6 @@
 - Extensions:
   - [circom-highlighting-vscode](https://marketplace.visualstudio.com/items?itemName=iden3.circom)
 
-### Compiler
-
 ## Algorithms
 
 ![](../../img/zkp-algorithms-complexity.png)
@@ -48,9 +46,9 @@
 
 There has been many languages developed to help in writing the cryptographic circuits behind zkp. Here are some of them:
 
-### Circom
+### [Circom](./langs/circom/)
 
-### Cairo
+### [Cairo](./langs/cairo/)
 
 ## Examples
 
