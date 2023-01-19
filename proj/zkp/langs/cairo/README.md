@@ -1,6 +1,6 @@
 # Cairo
 
-## Overview
+## About
 
 - A language for writing zk-STARKs maths circuits.
 - Analogous to Circom language (for zkSNARK).
