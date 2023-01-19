@@ -13,7 +13,7 @@
     - Circom (verifier circuits)
     - `snarkjs`
 
-    ![](../../../img/tornado-cash-sc-architecture.png)
+    ![](../../../../img/tornado-cash-sc-architecture.png)
 
 ## How it works
 
@@ -27,7 +27,7 @@
 - The funds has to be 1, 10, 100, etc ETH, & not so precise. Otherwise, it would be easy to identify the depositor.
 - SC has a merkle root for a tree with all the hashes of the deposits as leaves.
 
-![](../../../img/tornado-cash-zkp-deposit.png)
+![](../../../../img/tornado-cash-zkp-deposit.png)
 
 ### Withdraw
 
@@ -46,13 +46,13 @@
 
 - **Correct method** ✅:
 
-  ![](../../../img/tornado-cash-zkp-withdrawal.png)
+  ![](../../../../img/tornado-cash-zkp-withdrawal.png)
 
   1. The withdrawer provides the `proof` without disclosing the hash or (secret, nullifier).
   2. Now, the SC won't be able to find the deposit that matches the `hash`.
   3. But, the withdrawer has to provide the zkSNARK-proof in order to get the funds.
 
-  ![](../../../img/tornado-cash-zkp-withdrawal-submit-zkp.png)
+  ![](../../../../img/tornado-cash-zkp-withdrawal-submit-zkp.png)
 
 ### Complete flow
 
@@ -60,16 +60,16 @@ E.g.
 
 - 1st user deposits 1 ETH say.
 - It generates a proof/commitment `c0 = hash(s0, n0)`. Hence, it would look like this:
-  ![](../../../img/tornado-cash-zkp-deposit-0.png)
+  ![](../../../../img/tornado-cash-zkp-deposit-0.png)
 - 2nd user deposits 1 ETH say.
-  ![](../../../img/tornado-cash-zkp-deposit-1.png)
+  ![](../../../../img/tornado-cash-zkp-deposit-1.png)
 - 3rd user deposits 1 ETH say & likewise.
 
 So, in this way, we would be able to generate a merkle tree with all the deposits.
 
 Now, let's say we want to see if the 3rd user's deposit is recorded in the SC's merkle tree. We would need some hashes, which are not known to the 3rd user and would look like this:
 
-![](../../../img/tornado-cash-zkp-deposit-2-check.png)
+![](../../../../img/tornado-cash-zkp-deposit-2-check.png)
 
 Now, from withdrawer's perspective, zk-SNARKs would help us to prove that the 3rd user's deposit is recorded in the SC's merkle tree without even revealing `c3`.
 

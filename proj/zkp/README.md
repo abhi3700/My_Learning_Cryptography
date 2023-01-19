@@ -108,6 +108,7 @@ Here are the examples/case studies:
 - [Understanding Zero-Knowledge Proofs Through the Source Code of Tornado Cash](https://betterprogramming.pub/understanding-zero-knowledge-proofs-through-the-source-code-of-tornado-cash-41d335c5475f)
 - [Zero-Knowledge Proofs Using SnarkJS and Circom](https://betterprogramming.pub/zero-knowledge-proofs-using-snarkjs-and-circom-fac6c4d63202)
 - [SnarkPack: How to aggregate SNARKs efficiently | Protocol Labs Filecoin](https://research.protocol.ai/blog/2021/snarkpack-how-to-aggregate-snarks-efficiently/)
+- [Libraries for finite field, elliptic curve, and polynomial arithmetic](https://github.com/arkworks-rs/algebra)
 
 ### Videos
 
@@ -118,9 +119,11 @@ Here are the examples/case studies:
 - [Solidity Dev to ZK Dev: Why and How You Should Start ZK Dev Now](https://www.youtube.com/watch?v=wyBNZzLEgkA)
 - [Scalability is Boring, Privacy is Dead: ZK-Proofs, What are They Good for? by Ian Miers](https://www.youtube.com/watch?v=AX7eAzfSB6w)
 - [Proof of x from H(x) using zkSnarks for Solidity Smart Contracts](https://www.youtube.com/watch?v=NMa479P8r0Y)
+- [STARKS I - Arithmetization Eli Ben Sasson Technion Cyber Computer Security](https://www.youtube.com/watch?v=9VuZvdxFZQo)
+- [StarkNet House 2022 Sessions](https://www.youtube.com/playlist?list=PLC6CxTQU-oBgOSOdG8964L87SzjWcHtiY)
 
 ### Motivational
 
-- [What to know about Zero Knowledge | Devcon Bogotá](https://www.youtube.com/watch?v=hBupNf1igbY)
+- [What to know about Zero Knowledge | Devcon Bogotá](https://www.youtube.com/watch?v=hBupNf1igbY) ✅
 - [Designing Public Goods Using ZKPs by Rachel | Devcon Bogotá](https://www.youtube.com/watch?v=qWcU2saOlw4)
 - [Practical Use Cases for Zero-Knowledge](https://medium.com/@aleohq/practical-use-cases-for-zero-knowledge-d8e5be5dfe46)
