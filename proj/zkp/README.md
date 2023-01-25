@@ -20,6 +20,11 @@
   - fast light clients/compact blockchain (Celo, [Mina](./examples/mina-protocol/))
   - Filecoin (provable decentralized storage)
     > It verifies [2M Groth16 SNARKS per day](https://spacegap.github.io/#/)
+  - [Is Zero Knowledge the Future of NFTs?](https://www.youtube.com/watch?v=SDa6jZQB2mg)
+    - storing metadata on-chain with ZKP
+  - [Real World Use Cases that Mina Will Enable With ZK Technology | Mina Protocol](https://www.youtube.com/watch?v=rRwG8WkZYBE)
+    - providing docs during loan
+    - login system
 
 ## Tools
 
