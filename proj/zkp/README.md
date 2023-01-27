@@ -86,6 +86,7 @@
 - Better documentation & community support.
 - txn cost for zk-SNARK is 24% of zk-STARK.
 - on-chain proof size for zk-SNARK is much smaller than zk-STARK.
+- There is a [spartan](https://github.com/microsoft/Spartan) repo maintained by Microsoft which is a zk-SNARK implementation in Rust.
 - A `Rust` lib called [bellman](https://github.com/zkcrypto/bellman) which uses zk-SNARK's groth16 protocol.
 - A `Rust` lib called [arkworks-rs/groth16](https://github.com/arkworks-rs/groth16) which uses zk-SNARK's groth16 protocol.
 - A `Go` lib called [gnark](https://docs.gnark.consensys.net/en/stable/) which uses zk-SNARK's groth16 protocol.
