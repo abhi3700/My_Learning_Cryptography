@@ -107,6 +107,7 @@
 - on-chain proof size for zk-SNARK is much smaller than zk-STARK. That being said, STARKs have far larger proof sizes than SNARKs, which means that verifying STARKs takes more time than SNARKs and also leads to STARKs requiring more gas.
 - funded by Ethereum Foundation with 12M USD.
 - A language called [Cairo](https://www.cairo-lang.org/) which helps in writing the cryptographic circuits behind zk-STARKs. In other words, create provable programs, a.k.a programs with computational proofs.
+- Previously, Cairo lang was based on Python, but now it's based on Rust. [repo](https://github.com/starkware-libs/cairo/), [ERC20 token](https://github.com/starkware-libs/cairo/blob/d485f5ffd0c444d900cdcac57b9e745dcc280fba/crates/cairo-lang-starknet/test_data/erc20.cairo)
 - Use case:
   - In distributed computing, devices with low computing power can request a much more powerful device to perform the computation on its behalf. Later, the low-power device can verify or “check” that some larger entity with more resources is behaving correctly. This is a great strategy because verifying the computational proof is much cheaper than performing the actual computation. [Source](https://link.medium.com/TmRvViCNHwb)
 

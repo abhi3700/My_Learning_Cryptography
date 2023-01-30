@@ -5,22 +5,37 @@
 - A language for writing zk-STARKs maths circuits.
 - Analogous to Circom language (for zkSNARK).
 - Cairo is built on top of Python unlike Circom (Rust).
+- [Cairo-1.0 is released which is based on Rust](https://medium.com/starkware/cairo-1-0-is-here-7e1ac8377038)
 
 ## Installation
 
 > For macOS M1.
 
-### Editor
+### Rust (Latest, Unstable)
 
-VSCode Extensions: [Cairo language support for StarkNet](https://marketplace.visualstudio.com/items?itemName=ericglau.cairo-ls)
+#### CLI
 
-### Compiler
+#### Editor
+
+VSCode Extensions:
+
+- [vscode-cairo](https://github.com/starkware-libs/cairo/tree/d485f5ffd0c444d900cdcac57b9e745dcc280fba/vscode-cairo)
+
+### Python
+
+#### CLI
 
 ```bash
 brew install gmp
 pip3 install ecdsa fastecdsa sympy
 pip3 install cairo-lang
 ```
+
+#### Editor
+
+VSCode Extensions:
+
+- [Cairo language support for StarkNet](https://marketplace.visualstudio.com/items?itemName=ericglau.cairo-ls) [Python]
 
 > Cairo was tested with python3.9
 
