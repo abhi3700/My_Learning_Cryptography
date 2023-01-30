@@ -11,6 +11,11 @@
   - zkSNARK verifier SC that verifies the proofs submitted by the withdrawers. This has 2 parts:
 
     - Circom (verifier circuits)
+
+      > Zokrates can be used to convert the circuit into a verifier SC. Tried myself on Remix IDE:
+
+      ![](../../../../img/eg-1-zokrates-remix.png)
+
     - `snarkjs`
 
     ![](../../../../img/tornado-cash-sc-architecture.png)

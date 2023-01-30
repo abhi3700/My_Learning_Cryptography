@@ -2,6 +2,6 @@
 
 ## About
 
-- A language for SNARKs maths circuits.
+- A low level language for SNARKs maths circuits.
 
 ## Installation
