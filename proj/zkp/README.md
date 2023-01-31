@@ -44,7 +44,6 @@
 <u>Observations</u>:
 
 - _verification time_ is much more important than proof _generation time_ as the latter is done only once.
--
 
 ### zk-SNARK
 
