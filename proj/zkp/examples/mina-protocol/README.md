@@ -12,11 +12,11 @@
   1. a smart contract &
   2. an UI (user interface) for users to interact with it.
 
-![](../../../img/mina-protocol-zkapp.png)
+![](../../../../img/mina-protocol-zkapp.png)
 
 - A zkApp developer writes circuits that gives 2 outputs:
   - **prover function**
-    ![](../../../img/mina-protocol-zkapp-prover.png)
+    ![](../../../../img/mina-protocol-zkapp-prover.png)
   - **verifier function**
     ../../../img/mina-protocol-zkapp-verifier
 

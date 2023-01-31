@@ -156,6 +156,12 @@ SUBCOMMANDS:
    ├── proof.json
    ```
 
+   > Please note that the proof is not valid if the witness is not valid.
+   > So, the witness is the proof's input.
+   > Hence, you can observe here that `49` (decimal) is represented as `0x31`(hexadecimal)
+
+   ![zokrates with proof formed out of witness](../../../../img/zokrates-proof-w-witness.png)
+
 6.1. **Export Verifier**: Export a solidity verifier contract which contains the generated verification key and a public function to verify a solution to the compiled program:
 
 ```console
