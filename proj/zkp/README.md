@@ -14,6 +14,7 @@
   1. Completeness: Given a statement and a witness, the prover can convince the verifier.
   2. Soundness: A malicious prover cannot convince the verifier of a false statement.
   3. Zero-knowledge: The proof does not reveal anything but the truth of the statement, in particular it does not reveal the prover’s witness.
+- Ideally, using encryption with randomization gets us to generating a proof of knowledge. And that proof is sufficient enough to be verified in an **non-interactive** way. That's why randomization/non-deteminism is important to achieve in blockchain systems, which contradicts wih the deterministic nature of blockchain systems. And therefore, we need precompiled contracts to achieve this. EVM already has that built-in. [code in VM](https://github.com/ethereum/go-ethereum/tree/91cb6f863a965481e51d5d9c0e5ccd54796fd967/core/vm). Hence, the SC doesn't need to compute that proof, but rather the involved MPCs can do that and then the SC can verify the proof.
 - The challenge in ZKP is to write provable circuits with minimal constraints. Showcased in this [video](https://www.youtube.com/watch?v=umLmjsi_GbY). Reduced from `260` to `164` using an optimized code for the same circuit using ZoKrates lang.
 - **Use cases**:
   - [Tornado Cash](./tornado-cash/)
@@ -151,6 +152,7 @@ Here are the examples/case studies:
 
 ### Videos
 
+- [Computer Scientist Explains One Concept in 5 Levels of Difficulty | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c)
 - [ZK Privacy YT Playlist](https://www.youtube.com/watch?v=CgtNEALhJ3s&list=PLWACGbvIsEgn44LlTiPgVkOC4nG8tnJX-)
 - [Dystopia Labs | (Part 1/3) Demystifying Zero Knowledge Proofs: How To Build DApps With zk-SNARKs](https://www.youtube.com/watch?v=_6TqUNVLChc)
 - [Dystopia Labs | (Part 2/3) Demystifying Zero Knowledge Proofs: How To Build DApps With zk-SNARKs](https://www.youtube.com/watch?v=qwtOJvFo6vs)
