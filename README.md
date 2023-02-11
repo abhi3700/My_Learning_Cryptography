@@ -4,6 +4,21 @@ Learn about cryptography concepts - Both basics and core covered here.
 
 ![cryptography_.png](./res/learn%20cryptography.png)
 
+## Concepts
+
+- **RSA vs ECC**
+  - RSA is based on integer factorization problem, while ECC is based on discrete logarithm problem.
+  - RSA has lower key size than ECC.
+  - RSA key generation is slower than ECC, but verification of the former is faster than the latter => 20000 RSA vs 8000 ECC key verification.
+  - RSA is simpler to implement than ECC, also the former is less expensive to implement.
+    > Now, that quantum computer research has advanced, ECC is more secure than RSA, but it still can be broken by quantum computers. So, the researchers are working on quantum resistant cryptography.
+- Generating a **private key from a mnemonic passphrase** is a two-step process:
+
+  1. **Seed generation**: There is a <kbd>mnemonic passphrase (12 to 24 words)</kbd> -> <kbd>512-bit seed</kbd> using the BIP-39 algorithm.
+  2. **Private key generation**: <kbd>512-bit seed</kbd> seeded with <kbd>PRNG</kbd> -> <kbd>256-bit private key</kbd>
+
+  > This private key can then be used for a wide variety of purposes such as creating digital signatures, generating public/private key pairs and deriving key pairs for encryption.
+
 ## Books
 
 - Hacking using python - https://inventwithpython.com/hacking/
