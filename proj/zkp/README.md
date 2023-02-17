@@ -134,6 +134,10 @@ Here are the examples/case studies:
 
 - [Tornado Cash](./tornado-cash/)
 
+## Repositories
+
+- [Pairing cryptography library in Rust](https://github.com/zcash-hackworks/bn)
+
 ## References
 
 - [ZKP](https://en.wikipedia.org/wiki/Zero-knowledge_proof)
