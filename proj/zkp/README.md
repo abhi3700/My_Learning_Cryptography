@@ -137,6 +137,7 @@ Here are the examples/case studies:
 ## Repositories
 
 - [Pairing cryptography library in Rust](https://github.com/zcash-hackworks/bn)
+- [A protocol for private on-chain voting, implemented in Solidity | a16z backed by Andreessen Horowitz](https://github.com/a16z/cicada) 🌟🌟🌟🌟🌟
 
 ## References
 
