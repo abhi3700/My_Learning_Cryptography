@@ -177,6 +177,8 @@ Here are the examples/case studies:
   - [Lecture 10.5: Anonymous Payments](https://www.youtube.com/watch?v=Z0s4W3UBxM8)
 - ['Introduction to Zero Knowledge Proofs' - Elena Nadolinski](https://www.youtube.com/watch?v=BT88s7_VtC8)
 - [A ZoKrates Update by Thibaut Schaeffer | Devcon Bogotá](https://www.youtube.com/watch?v=umLmjsi_GbY) ✅
+- [Zero Knowledge Cryptography Introduction | Solidity Fridays](https://www.youtube.com/watch?v=Wne3O9P4jkw)
+- [How to Architect Zero-Knowledge Blockchain Apps? | Solidity Fridays](https://www.youtube.com/watch?v=NpHKK1mSlVM)
 
 ### Motivational
 
