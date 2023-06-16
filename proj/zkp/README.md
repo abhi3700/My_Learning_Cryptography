@@ -179,6 +179,10 @@ Here are the examples/case studies:
 - [A ZoKrates Update by Thibaut Schaeffer | Devcon Bogotá](https://www.youtube.com/watch?v=umLmjsi_GbY) ✅
 - [Zero Knowledge Cryptography Introduction | Solidity Fridays](https://www.youtube.com/watch?v=Wne3O9P4jkw)
 - [How to Architect Zero-Knowledge Blockchain Apps? | Solidity Fridays](https://www.youtube.com/watch?v=NpHKK1mSlVM)
+- [An Introduction to Scaling: Solana vs. Starkware](https://youtu.be/VtZXvhVpnfY)
+- [StarkNet: Decentralized and Permissionless ZK-Rollups](https://youtu.be/SxlgpmRsxsM)
+- [ZK HACK - Introduction to StarkNet Smart Contracts - Starkware](https://youtu.be/u_h6wtt1qlU)
+- [zkSummit6: Cairo: A Turing Complete STARK Framework – Shahar Papini - StarkWare](https://youtu.be/dJzIKQdg924)
 
 ### Motivational
 
