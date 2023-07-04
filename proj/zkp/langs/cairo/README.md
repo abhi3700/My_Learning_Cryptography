@@ -4,14 +4,14 @@
 
 - A language for writing zk-STARKs maths circuits.
 - Analogous to Circom language (for zkSNARK).
-- Cairo is built on top of Python unlike Circom (Rust).
-- [Cairo-1.0 is released which is based on Rust](https://medium.com/starkware/cairo-1-0-is-here-7e1ac8377038)
+- Previously, Cairo was built on top of Python
+- Now, Cairo is very bullish with rust variant like Circom (Rust).
 
 ## Installation
 
 > For macOS M1.
 
-### Rust (Latest, Unstable)
+### Cairo [Rust]
 
 #### CLI
 
@@ -46,7 +46,9 @@ $ scarb --version
 
 ##### Language server
 
-Using `scarb` package manager:
+Using `scarb` package manager.
+
+[Source](https://github.com/starkware-libs/cairo/blob/main/vscode-cairo/README.md)
 
 #### Editor
 
@@ -81,11 +83,15 @@ VSCode Extensions:
 - [Official Language guide](https://www.cairo-lang.org/)
 - [Cairo Playground](https://www.cairo-lang.org/playground/)
 - [Learn Stark sequencers](https://book.starknet.io/chapter_8/sequencers.html)
+- [Scarb toolchain documentation](https://docs.swmansion.com/scarb/docs)
 
 ### Videos
 
 - YT channels
   - [StarkWare](https://www.youtube.com/channel/UCnDWguR8mE2oDBsjhQkgbvg/playlists)
   - [StarkNet Africa](https://www.youtube.com/@starknetafrica)
+- [Starknet Workshops](https://www.youtube.com/playlist?list=PLcIyXLwiPilV5RBZj43AX1FY4FJMWHFTY)
 - [Cairo Bootcamp 1.0 | 05-Dec-2022](https://www.youtube.com/playlist?list=PLKhUlfTgU76DVMLsoGD8C30pCWh66peRC)
 - [STARK Devs Series | 19-Jan-2023](https://www.youtube.com/playlist?list=PLKhUlfTgU76CwprjKSBJw25sTuiIBhVvc)
+- [StarkNet ByteSized YT playlist](https://www.youtube.com/playlist?list=PLcIyXLwiPilVfjUeZ-XfD9I097ksXjKyU)
+  > very short length videos 2-3 mins each.

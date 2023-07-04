@@ -2,6 +2,7 @@
 
 ## Overview
 
+- A special case of MPC (Multi-party computation).
 - Zero-knowledge protocols act (very roughly) in three steps.
 
   1. Setup [private (trusted)/public (transparent)]
