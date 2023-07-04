@@ -44,17 +44,12 @@ Verify the installation:
 $ scarb --version
 ```
 
-##### Language server
-
-Using `scarb` package manager.
-
-[Source](https://github.com/starkware-libs/cairo/blob/main/vscode-cairo/README.md)
-
 #### Editor
 
 VSCode Extensions:
 
-- [vscode-cairo](https://github.com/starkware-libs/cairo/tree/d485f5ffd0c444d900cdcac57b9e745dcc280fba/vscode-cairo)
+- [vscode-cairo](https://github.com/starkware-libs/cairo/tree/main/vscode-cairo) for language server.
+- [Cairo Syntax](https://marketplace.visualstudio.com/items?itemName=0xChqrles.cairo-language) for syntax highlighting.
 
 ### Python
 
