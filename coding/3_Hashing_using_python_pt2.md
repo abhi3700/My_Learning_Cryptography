@@ -1,4 +1,6 @@
-![learn cryptography.png](https://res.cloudinary.com/hpiynhbhq/image/upload/v1514662777/gdtvefasejwtgqkvqeyu.png)
+# Hashing using Python - Part 2
+
+![](../img/learn_cryptography.png)
 
 Hey guys!...
 

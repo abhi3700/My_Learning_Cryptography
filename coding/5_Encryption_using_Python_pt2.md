@@ -1,4 +1,6 @@
-![learn cryptography.png](https://res.cloudinary.com/hpiynhbhq/image/upload/v1515498394/qkmdtmtmcizr38aw3ffx.png)
+# Encryption using Python - Part 2
+
+![](../img/learn_cryptography.png)
 
 Hey Guys!!..
 

@@ -1,4 +1,6 @@
-![learn cryptography.png](https://res.cloudinary.com/hpiynhbhq/image/upload/v1514338762/m5ifbwspszd0v2ggzvkg.png)
+# Hashing vs Encryption
+
+![](../img/learn_cryptography.png)
 
 Hi Guys!!....
 
