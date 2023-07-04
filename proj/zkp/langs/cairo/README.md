@@ -1,5 +1,7 @@
 # Cairo
 
+Follow my repo for playground: [Cairo Playground](https://github.com/abhi3700/cairo-playground)
+
 ## About
 
 - A language for writing zk-STARKs maths circuits.
@@ -9,47 +11,9 @@
 
 ## Installation
 
-> For macOS M1.
+### [Cairo [Rust]](https://github.com/abhi3700/cairo-playground/README.md#installation)
 
-### Cairo [Rust]
-
-#### CLI
-
-##### Package manager
-
-[SOURCE](https://docs.swmansion.com/scarb/docs/install#quick-installation)
-
-```console
-❯ curl --proto '=https' --tlsv1.2 -sSf https://docs.swmansion.com/scarb/install.sh | sh                                                                                            ⏎
-scarb-install: retrieving latest version from https://github.com/software-mansion/scarb...
-scarb-install: downloading scarb-v0.5.0-aarch64-apple-darwin.tar.gz...
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100 19.9M  100 19.9M    0     0  6316k      0  0:00:03  0:00:03 --:--:--  9.7M
-scarb-install: installed scarb to /Users/abhi3700/.local/share/scarb-install/latest
-scarb-install: created symlink /Users/abhi3700/.local/bin/scarb -> /Users/abhi3700/.local/share/scarb-install/latest/bin/scarb
-
-Detected your preferred shell is zsh and added '$HOME/.local/bin' to PATH. Run 'source /Users/abhi3700/.zshrc' or start a new terminal session to use Scarb.
-Then, run 'scarb --version' to verify your installation. Happy coding!
-```
-
-```console
-source /Users/abhi3700/.zshrc
-```
-
-Verify the installation:
-
-```console
-$ scarb --version
-```
-
-#### Editor
-
-VSCode Extensions:
-
-- [vscode-cairo](https://github.com/starkware-libs/cairo/tree/main/vscode-cairo) for language server.
-- [Cairo Syntax](https://marketplace.visualstudio.com/items?itemName=0xChqrles.cairo-language) for syntax highlighting.
+More can be found in my [cairo-playground](https://github.com/abhi3700/cairo-playground).
 
 ### Python
 
