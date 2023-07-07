@@ -38,3 +38,4 @@ Motivation behind MPC-based smart wallets is to eliminate the need for private k
 - [The Future of Wallets: MPC vs Smart Wallets by Ivo Georgiev | Devcon Bogotá](https://www.youtube.com/watch?v=85w0TvZMivA) ✅
 - [PartiHack2022 - Multi-Party Computation (MPC) 101 - Ivan Damgaard - Co-founder, Partisia Blockchain](https://www.youtube.com/watch?v=LlMGZVjcMcU) 🧑🏻‍💻
 - [Multi-Party Computation: From Theory to Practice](https://www.youtube.com/watch?v=pNNLAEygPQI)
+- [[Cryptography Meetup] A crash course on Secure Multiparty Computation (MPC)](https://youtube.com/watch?v=HOqv5xzrlFI)
