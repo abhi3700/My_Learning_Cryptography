@@ -2,12 +2,34 @@
 
 Follow my repo for playground: [Cairo Playground](https://github.com/abhi3700/cairo-playground)
 
-## About
+## Overview
 
 - A language for writing zk-STARKs maths circuits.
 - Analogous to Circom language (for zkSNARK).
-- Previously, Cairo was built on top of Python
-- Now, Cairo is very bullish with rust variant like Circom (Rust).
+- Previously, Cairo was built on top of Python.
+- Now, Cairo is the Rust-inspired, native smart contract language for Starknet.
+- Cairo is the first Turing-complete language for creating STARK-provable programs for general computation.
+
+### Cairo vs Solidity
+
+| Context                       | Cairo                                                                                                                                 | Solidity                                                                                |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| SC language type              | Turing complete                                                                                                                       | Turing complete                                                                         |
+| SC language                   | Cairo                                                                                                                                 | Solidity                                                                                |
+| VM                            | CVM                                                                                                                                   | EVM                                                                                     |
+| SC binary                     | CASM                                                                                                                                  | EVM bytecode                                                                            |
+| Network                       | Starknet                                                                                                                              | EVM L1 chains                                                                           |
+| Write provable programs using | Cairo                                                                                                                                 | ❌                                                                                      |
+| Network load                  | **Low**: Because of the proof generation once by the L2 node alone (unlike SNARKs) & then multiple times verification by the L1 nodes | **High**: Each node has to validate the info (includes generating proof & verifying it) |
+| Inheritance & polymorphism    | Not directly, but importing modules, specific functions, traits possible                                                              | inheritance, polymorphism possible                                                      |
+
+> **Network load (scalability)**: Here, the verification time is to be minimal considering multiple times verification. Even if the prover time is high, it's fine as done only once.
+
+### CVM vs EVM
+
+| Context          | CVM                                                                                                                                                                    | EVM                              |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| **Memory model** | single-write-only memory model so that the value is retained until the execution of the program is complete, as they rely on verifying the correctness of computations | multiple read-write memory model |
 
 ## Installation
 
