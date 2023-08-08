@@ -19,6 +19,9 @@ Refer [this](./starknet.drawio).
 
 ## Concepts
 
+- The **proof size** can be reduced by removing the feature (i.e. post-quantum security) for the proof.
+- The **prover time** can be reduced by introducing MPC (Multi-Party Computation) where the computation is done in parallel by multiple parties.
+
 ---
 
 ![](../../../../img/winterfell_verifyable_delay.png)
@@ -31,4 +34,4 @@ Refer [this](./starknet.drawio).
 
 ## References
 
-- [ZK HACK mini - Writing STARK proofs with Winterfell](https://www.youtube.com/watch?v=LBTrX0Ukdvs)
+- [ZK HACK mini - Writing STARK proofs with Winterfell](https://www.youtube.com/watch?v=LBTrX0Ukdvs) ✅
