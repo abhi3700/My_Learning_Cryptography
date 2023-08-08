@@ -155,6 +155,7 @@ Here are the examples/case studies:
 - [What is Cairo programming language and StarkNet: A Primer on L2 blockchains](https://medium.com/@hackintoshrao/what-is-cairo-programming-language-and-starknet-a-primer-on-l2-blockchains-410203c21669)
 - [Understanding Trusted Setups: A Guide](https://blog.pantherprotocol.io/a-guide-to-understanding-trusted-setups/)
 - [Why it is said that “zk-SNARKs need a trusted setup” to work?](https://crypto.stackexchange.com/questions/89449/why-it-is-said-that-zk-snarks-need-a-trusted-setup-to-work/89491#89491?newreg=7d16a085016b4ae0818ac243dae94140)
+- [A beginner's intro to coding zero-knowledge proofs](https://dev.to/spalladino/a-beginners-intro-to-coding-zero-knowledge-proofs-c56)
 
 ### Videos
 
