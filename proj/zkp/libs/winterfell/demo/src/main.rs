@@ -36,7 +36,7 @@ fn main() {
 
     // generate the proof
     let now = Instant::now();
-    let proof = prover.prove(trace).unwrap();
+    let proof = prover.prove(&trace).unwrap();
     println!("Generated proof in {} ms", now.elapsed().as_millis());
 
     // serialize proof and check security level

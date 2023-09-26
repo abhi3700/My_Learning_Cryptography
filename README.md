@@ -1,8 +1,8 @@
-# My_Learning_Cryptography-Concepts
+# Cryptography
 
 Learn about cryptography concepts - Both basics and core covered here.
 
-![cryptography_.png](./res/learn%20cryptography.png)
+![cryptography_.png](./img/learn_cryptography.png)
 
 ## Concepts
 
@@ -19,12 +19,25 @@ Learn about cryptography concepts - Both basics and core covered here.
 
   > This private key can then be used for a wide variety of purposes such as creating digital signatures, generating public/private key pairs and deriving key pairs for encryption.
 
+- **Hash functions**
+  ![](img/hash_functions.png)
+
+  > All hash functions are covered by RustCrypto org. [Source](https://github.com/RustCrypto/hashes) except [blake3](https://github.com/BLAKE3-team/BLAKE3).
+
+- **ECC (Elliptic Curve Cryptography)**
+  - Elliptic curve cryptography (ECC) is an approach to public-key cryptography based on the algebraic structure of elliptic curves over finite fields.
+  - It has ECDH (Elliptic Curve Diffie-Hellman) and ECDSA (Elliptic Curve Digital Signature Algorithm) algorithms for key exchange and digital signatures respectively.
+    - ECDH is used for key exchange i.e. to share a secret key between two parties i.e. for Alice and Bob to share a secret key. `private_key_A \* public_key_B = shared_secret_key = private_key_B \* public_key_A`
+
 ## Books
 
-- Hacking using python - https://inventwithpython.com/hacking/
+- Hacking using python - https://inventwithpython.com/hacking/ 🧑🏻‍💻
 - Handbook of Applied Cryptography - http://cacr.uwaterloo.ca/hac/
+- Practical Cryptography for Developers - https://cryptobook.nakov.com/ 🧑🏻‍💻
 
 ## Software tools
+
+### Python
 
 - Python Crypto Cheatsheets - https://www.pythonsheets.com/notes/python-crypto.html
 - Python cryptography - [Github](https://github.com/pyca/cryptography) , [Website](https://cryptography.io/en/latest/)
@@ -33,6 +46,12 @@ Learn about cryptography concepts - Both basics and core covered here.
 - pyDes: a library for DES symmetric encryption algorithm - [Github1](https://github.com/toddw-as/pyDes), [Github2](https://github.com/RobinDavid/pydes), [pip package](https://pypi.python.org/pypi/pyDes/)
 - pyaes: a library for AES symmetric encryption algorithm - [Github](https://github.com/ricmoo/pyaes).
 - Python-RSA: a library for RSA i.e. assymetric algorithm - [Github](https://github.com/sybrenstuvel/python-rsa)
+
+### Rust
+
+- Rust Crypto | All crytographic hashes: [Github](https://github.com/RustCrypto/hashes)
+- Blake3 Hash in Rust: [Github](https://github.com/BLAKE3-team/BLAKE3)
+- ECC in Rust: [Github](
 
 ## Resources
 
