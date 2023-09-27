@@ -74,8 +74,9 @@
 - Trusted setup requires **Powers of Tau** ceremony to be followed.
 - In this ceremony after the proof generation, at least one of the relay nodes are expected to destroy their hardware (responsible for generating the keys) to ensure that the keys are destroyed.
 - The most used system/protocol in SNARK is [Groth16](https://eprint.iacr.org/2016/260.pdf) by Jens Groth.
+- But, there is inclination towards Plonk system/protocol which promises a universal CRS for multiple proof generation.
 - depends on elliptic-curves.
-- The proof system/protocol (Groth16) requires a **structured reference string** (SRS) i.e. a vector of elements specially crafted for a specific computation. The trusted setup (a complicated setup is required in order to generate keys that prover & verifier can use to verify the proofs.
+- The proof system/protocol (Groth16) requires a **structured reference string** (SRS) i.e. a vector of elements specially crafted for a specific computation. The trusted setup i.e. a complicated setup is required in order to generate keys that prover & verifier can use to verify the proofs.
 - And because of its demand & increased usage in a network, it faces a scalability problem.
 - The **reason** is that all the nodes in the network have to process each proof individually to agree on the final state, which enforces an implicit limit as to how many proofs the network can verify per day.
 - Solutions to scalability issues:
