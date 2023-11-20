@@ -16,7 +16,7 @@ pub fn main() {
     // 32 bytes
     let signing_key = SigningKey::random(&mut OsRng);
 
-    // generate verification key from signing key
+    // generate public/verification key from signing key
     // 33 bytes
     let verifying_key = VerifyingKey::from(&signing_key);
 

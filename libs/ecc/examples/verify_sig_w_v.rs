@@ -34,7 +34,7 @@ pub fn main() {
     );
 
     // === 2. Verification
-    // generate verification key from signature
+    // generate verification (public) key from the signature
     // 33 bytes
     let recovered_key =
         VerifyingKey::recover_from_digest(Keccak256::new_with_prefix(msg), &signature, rec_id)
