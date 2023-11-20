@@ -1,4 +1,4 @@
-//! Elliptic curve maths with real numbers
+//! Elliptic curve maths within cryptographic boundary
 //!
 //! In maths, we can perform operations like P + Q with real numbers.
 //! But in cryptography, it's done within [`Finite Field (FF)`] with a
