@@ -49,7 +49,7 @@ Learn about cryptography concepts - Both basics and core covered here.
 - Handbook of Applied Cryptography - http://cacr.uwaterloo.ca/hac/
 - Practical Cryptography for Developers - https://cryptobook.nakov.com/ 🧑🏻‍💻
 
-## Software tools
+## Repositories
 
 ### Python
 
@@ -71,7 +71,33 @@ Learn about cryptography concepts - Both basics and core covered here.
 
 ## Resources
 
-- (Blog) Useful Cryptography Resources - https://blog.cryptographyengineering.com/useful-cryptography-resources/
-- (Blog) RSA Algorithm in Cryptography - https://www.geeksforgeeks.org/rsa-algorithm-cryptography/
-- (Blog) Adding salt to Hashing - https://auth0.com/blog/adding-salt-to-hashing-a-better-way-to-store-passwords/
-- (Blog) Elliptic Curve Cryptography - https://medium.com/coinmonks/elliptic-curve-cryptography-6de8fc748b8b
+### Blogs
+
+- Useful Cryptography Resources - https://blog.cryptographyengineering.com/useful-cryptography-resources/
+- RSA Algorithm in Cryptography - https://www.geeksforgeeks.org/rsa-algorithm-cryptography/
+- Adding salt to Hashing - https://auth0.com/blog/adding-salt-to-hashing-a-better-way-to-store-passwords/
+- Elliptic Curve Cryptography - https://medium.com/coinmonks/elliptic-curve-cryptography-6de8fc748b8b
+- ZKCamp - https://www.zkcamp.xyz/
+- Learning Cryptography Series By Loopring on Medium
+  - [Part-1](https://medium.com/loopring-protocol/learning-cryptography-finite-fields-ced3574a53fe)
+  - [Part-2: Diffie-Hellman Key Exchange, Discrete Log Problem & Cyclic Groups](https://medium.com/loopring-protocol/learning-cryptography-diffie-hellman-key-exchange-discrete-log-problem-cyclic-groups-28703f3d5a48)
+  - [Part-3: Elliptic Curves](https://medium.com/loopring-protocol/learning-cryptography-elliptic-curves-4cfd0bdcb05a)
+  - [Part-4: Complexity Theory](https://medium.com/loopring-protocol/learning-cryptography-complexity-theory-6638a7c94c7d)
+
+### Maths
+
+Use this tool to visualize [Desmos](https://www.desmos.com/) your custom maths function.
+
+#### Finite Elements
+
+- [Finite Fields in Cryptography: Why and How](https://www.youtube.com/watch?v=ColSUxhpn6A)
+- Finite Field and Applications | By NPTEL
+  - [Lecture 1](https://www.youtube.com/watch?v=0B0M0aocfJA)
+  - [Lecture 2](https://www.youtube.com/watch?v=G7oWCPsuE5M)
+  - [Lecture 3](https://www.youtube.com/watch?v=dt1YvAxEd3k)
+  - [Lecture 4](https://www.youtube.com/watch?v=esZ6f-_re9Q)
+  - [Lecture 5](https://www.youtube.com/watch?v=cv1YYNVY7J4)
+  - [Lecture 6](https://www.youtube.com/watch?v=G7oWCPsuE5M)
+  - [Lecture 7](https://www.youtube.com/watch?v=G7oWCPsuE5M)
+  - [Lecture 8](https://www.youtube.com/watch?v=G7oWCPsuE5M)
+- [Galois Field in Cryptography - Coding Ninjas](https://www.codingninjas.com/studio/library/galois-field-in-cryptography)

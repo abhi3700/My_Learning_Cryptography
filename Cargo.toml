@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "libs/merkle_tree",
+    "libs/ecc",
+    "proj/zkp/libs/winterfell/demo",
+]
+resolver = "2"

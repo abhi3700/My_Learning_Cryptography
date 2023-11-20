@@ -3,8 +3,8 @@ use std::time::Instant;
 use winterfell::{
     crypto::{hashers::Blake3_256, DefaultRandomCoin},
     math::{fields::f128::BaseElement as Felt, FieldElement, ToElements},
-    Air, AirContext, Assertion, ByteWriter, EvaluationFrame, ProofOptions, Prover, Serializable,
-    StarkProof, Trace, TraceInfo, TraceTable, TransitionConstraintDegree,
+    AcceptableOptions, Air, AirContext, Assertion, ByteWriter, EvaluationFrame, ProofOptions,
+    Prover, Serializable, StarkProof, Trace, TraceInfo, TraceTable, TransitionConstraintDegree,
 };
 
 const ALPHA: u64 = 3;
@@ -36,7 +36,7 @@ fn main() {
 
     // generate the proof
     let now = Instant::now();
-    let proof = prover.prove(&trace).unwrap();
+    let proof = prover.prove(trace).unwrap();
     println!("Generated proof in {} ms", now.elapsed().as_millis());
 
     // serialize proof and check security level
@@ -57,7 +57,9 @@ fn main() {
 
     // verify the proof
     match winterfell::verify::<VdfAir, Blake3_256<Felt>, DefaultRandomCoin<Blake3_256<Felt>>>(
-        proof, pub_inputs,
+        proof,
+        pub_inputs,
+        &AcceptableOptions::from(value),
     ) {
         Ok(_) => println!("Proof verified in {:.1} ms", now.elapsed().as_millis()),
         Err(msg) => println!("{}", msg),

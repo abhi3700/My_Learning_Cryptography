@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2023-09-27T13:34:50.488Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.8.2 Chrome/114.0.5735.289 Electron/25.8.1 Safari/537.36" etag="cwEx0sPiRbGvpQnNduK1" version="21.8.2" type="device" pages="2">
-  <diagram name="Page-1" id="ugzg2o5_LcXGpwFK0HJw">
-    <mxGraphModel dx="3096" dy="1640" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+<mxfile host="Electron" modified="2023-10-03T14:56:36.840Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.8.2 Chrome/114.0.5735.289 Electron/25.8.1 Safari/537.36" etag="bnn-2uv7G0mzpRgG2tSO" version="21.8.2" type="device" pages="2">
+  <diagram name="ECC" id="ugzg2o5_LcXGpwFK0HJw">
+    <mxGraphModel dx="1886" dy="765" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -203,6 +203,34 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="UZuYaf_Zyp-Nslkp1L_Y-2" value="Prover" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;fillColor=#66FF66;strokeColor=#1D471D;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="249.99999999999977" y="150" width="20" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="UZuYaf_Zyp-Nslkp1L_Y-4" value="Verifier" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="699.9999999999998" y="150" width="20" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="UZuYaf_Zyp-Nslkp1L_Y-6" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.567;entryY=0.334;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="UZuYaf_Zyp-Nslkp1L_Y-2" target="UZuYaf_Zyp-Nslkp1L_Y-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="300" as="sourcePoint" />
+            <mxPoint x="470" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UZuYaf_Zyp-Nslkp1L_Y-7" value="1. Send proof with statement" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="UZuYaf_Zyp-Nslkp1L_Y-6">
+          <mxGeometry x="-0.0085" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UZuYaf_Zyp-Nslkp1L_Y-8" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="UZuYaf_Zyp-Nslkp1L_Y-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="708.9999999999998" y="299.58" as="sourcePoint" />
+            <mxPoint x="470" y="299.58" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UZuYaf_Zyp-Nslkp1L_Y-9" value="2. Confirm statement assertion whether true or false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="UZuYaf_Zyp-Nslkp1L_Y-8">
+          <mxGeometry x="0.033" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

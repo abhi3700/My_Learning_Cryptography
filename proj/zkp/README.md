@@ -140,6 +140,7 @@ Here are the examples/case studies:
 
 - [Pairing cryptography library in Rust](https://github.com/zcash-hackworks/bn)
 - [A protocol for private on-chain voting, implemented in Solidity | a16z backed by Andreessen Horowitz](https://github.com/a16z/cicada) 🌟🌟🌟🌟🌟
+- [Noir lang for writing zkSNARK circuits & SCs on Aztec protocol](https://github.com/noir-lang/noir)
 
 ## References
 
