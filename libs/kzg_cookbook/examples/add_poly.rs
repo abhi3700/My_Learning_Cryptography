@@ -1,8 +1,23 @@
-//! Add 2 polynomials of same/different len with coefficients of
-//! signed type (both positive & negative no.s included).
+//! Add 2 polynomials of same/different len with positive coefficients over Fp
+//! where p = 18446744073709551557 is a large prime number closest to [`u64::MAX`]
+//! This means all the sum result ∈ {0, ....., p-1} i.e. all the `limb_t` values of `l`
+//! would follow this range.
+//!
+//! Defined like this:
+//! ```
+//! type limb_t = u64
+//!
+//! struct blst_fr {
+//!     l: [limb_t; 4usize],
+//! }
+//!
+//! struct FsFr(pub blst_fr);
+//! ```
 //!
 //! p1 = f(x) = x^3 + 3x + 7
 //! p2 = g(x) = x^5 + 34x^4 + 4x^3 + 5x
+//!
+//! p3 = (p1 + p2) mod p
 
 use kzg::types::{fr::FsFr, poly::FsPoly};
 use kzg_traits::{eip_4844::blst_fr, Fr, Poly};
@@ -18,6 +33,9 @@ fn main() {
         FsFr::from_u64(34),
         FsFr::one(),
     ];
+
+    // choose a large prime number closest to `u64::MAX`
+    let prime_num = 18446744073709551557_u64;
 
     // just for representing as FsPoly
     let poly1 = FsPoly { coeffs: poly1_coeffs.clone() };
@@ -42,30 +60,30 @@ fn main() {
     assert!(poly1_coeffs.len() == poly2_coeffs.len(), "unequal polys even after zero padding");
 
     // add the coefficients
-    let poly3_coeffs: Vec<FsFr> =
-        poly1_coeffs.iter().zip(poly2_coeffs.iter()).map(|(a, b)| add_fsfr_coeffs(a, b)).collect();
+    let poly3_coeffs: Vec<FsFr> = poly1_coeffs
+        .iter()
+        .zip(poly2_coeffs.iter())
+        .map(|(a, b)| add_fsfr_coeffs(a, b, prime_num))
+        .collect();
 
     assert_eq!(poly3_coeffs.len(), max_len);
+    dbg!(poly3_coeffs.clone());
 
     // Just for representing poly3
-    let poly3 = FsPoly { coeffs: poly3_coeffs };
+    let _poly3 = FsPoly { coeffs: poly3_coeffs };
 }
 
-/// FIXME: Add FsFr coefficients
-/// Error: `Overflow in checked add`
-fn add_fsfr_coeffs(c1: &FsFr, c2: &FsFr) -> FsFr {
+/// Add FsFr coefficients over a Fp
+fn add_fsfr_coeffs(c1: &FsFr, c2: &FsFr, prime_num: u64) -> FsFr {
     let l1 = c1.0.l;
     let l2 = c2.0.l;
 
-    let mut l_c1c2: Vec<u64> = l1
-        .iter()
-        .zip(l2.iter())
-        .map(|(a, b)| {
-            dbg!(a, b);
-            a.checked_add(*b).expect("Overflow in checked_add")
-        })
-        .collect();
+    let mut l_c1c2: Vec<u64> =
+        l1.iter().zip(l2.iter()).map(|(a, b)| a.wrapping_add(*b) % prime_num).collect();
+
+    // Ensure the vector has exactly 4 elements
     l_c1c2.resize(4, 0);
+    // get the array out of slice.
     let l_c1c2: [u64; 4] =
         l_c1c2.as_slice().try_into().expect("Unable to get sized array from slice");
 

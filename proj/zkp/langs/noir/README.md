@@ -71,3 +71,9 @@
 | hello   | PLONKCSat { width: 3 } | 5            | 5                    |
 +---------+------------------------+--------------+----------------------+
 ```
+
+## Resources
+
+- [Noir W3C Verifiable Credentials](https://github.com/Noir-W3C-Verifiable-Credentials/protocol-core)
+- [Awesome Noir](https://github.com/noir-lang/awesome-noir/tree/main#benchmarks)
+- [ ] KZG polynomial commitment in Noir
