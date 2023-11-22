@@ -1,5 +1,5 @@
 //! Create polynomial of len 5 with random coefficients.
-//! len = 5 means coefficients = 5.
+//! len = 5 means no. of coefficients = 5.
 //! One way of representing polynomial is to represent as vector of coefficients.
 
 use kzg::types::{fr::FsFr, poly::FsPoly};

@@ -1,17 +1,10 @@
-//! Create polynomial of len 4 (= order + 1) from given coefficients.
+//! Create polynomial of len 4 (= order + 1) from specific/given coefficients.
 //!
 //! no. of coefficients = polynomial order + 1
 //!
 //! E.g. f(x) = x^3 + 3x + 7
 //! Here, coefficients are represented as [7, 3, 0, 1]. Another way of
 //! representing polynomial.
-//!
-//! A coefficient is represented as [u64; 4] because of BLST crate.
-//! Technically it's possible to represent as [U256; 4], but the
-//! computers are good in 64-bit arithmetic by default. So, it
-//! would be easy to do the arithmetic operations if considered as
-//! [u64; 4].
-//! Moreover, kzg crate would be difficult to interface with BLST lib.
 
 use kzg::types::fr::FsFr;
 use kzg::types::poly::FsPoly;
