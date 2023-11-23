@@ -1,6 +1,6 @@
 //! Add 2 polynomials of same/different len with positive coefficients over Fp
 //! where p = 18446744073709551557 is a large prime number closest to [`u64::MAX`]
-//! This means all the sum result ∈ [1,p] i.e. {1, ..., p-1} i.e. all the `limb_t` values of `l`
+//! This means all the sum result ∈ [0,p) i.e. {0, ..., p-1} i.e. all the `limb_t` values of `l`
 //! would follow this range.
 //!
 //! Defined like this:

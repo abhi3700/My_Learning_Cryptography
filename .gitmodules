@@ -1,3 +1,6 @@
 [submodule "cookbook"]
 	path = cookbook
 	url = https://github.com/abhi3700/cryptography_with_rust.git
+[submodule "proj/semaphore-playground"]
+	path = proj/semaphore-playground
+	url = https://github.com/abhi3700/semaphore-playground.git
