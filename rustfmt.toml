@@ -1,4 +1,5 @@
 edition = "2021"
+max_width = 100
 format_code_in_doc_comments = true
 format_macro_bodies = true
 format_macro_matchers = true
@@ -9,4 +10,4 @@ match_arm_blocks = false
 reorder_impl_items = true
 use_field_init_shorthand = true
 use_small_heuristics = "Max"
-wrap_comments = true
+wrap_comments = false

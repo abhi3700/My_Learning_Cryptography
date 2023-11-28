@@ -2,7 +2,6 @@
 members = [
     "libs/merkle_tree",
     "libs/ecc",
-    "libs/kzg_cookbook",
-    # "proj/zkp/libs/winterfell/demo",
+    "libs/kzg_playground",
 ]
 resolver = "2"

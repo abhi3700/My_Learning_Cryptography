@@ -1,5 +1,7 @@
 # Semacaulk Playground
 
+https://github.com/abhi3700/semacaulk-playground.git
+
 ## Resources
 
 - [Documentation](https://geometryresearch.github.io/semacaulk/overview.html)

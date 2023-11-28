@@ -1,7 +1,7 @@
 //! Add 2 polynomials of same/different len with positive coefficients over Fp
-//! where p = 18446744073709551557 is a large prime number closest to [`u64::MAX`]
-//! This means all the sum result ∈ [0,p) i.e. {0, ..., p-1} i.e. all the `limb_t` values of `l`
-//! would follow this range.
+//! where p = 18446744073709551557 is a large prime number closest to
+//! [`u64::MAX`] This means all the sum result ∈ [0,p) i.e. {0, ..., p-1} i.e.
+//! all the `limb_t` values of `l` would follow this range.
 //!
 //! Defined like this:
 //! ```
@@ -19,20 +19,17 @@
 //!
 //! p3 = (p1 + p2) mod p
 
-use kzg::types::{fr::FsFr, poly::FsPoly};
-use kzg_traits::{eip_4844::blst_fr, Fr, Poly};
+use kzg::types::fr::FsFr;
+use kzg::types::poly::FsPoly;
+use kzg_traits::eip_4844::blst_fr;
+use kzg_traits::{Fr, Poly};
 
 fn main() {
     // represent the polynomials as vec of coefficients
-    let mut poly1_coeffs = vec![FsFr::from_u64(7), FsFr::from_u64(3), FsFr::zero(), FsFr::one()];
-    let mut poly2_coeffs = vec![
-        FsFr::zero(),
-        FsFr::from_u64(5),
-        FsFr::zero(),
-        FsFr::from_u64(4),
-        FsFr::from_u64(34),
-        FsFr::one(),
-    ];
+    let mut poly1_coeffs: Vec<FsFr> =
+        vec![7, 3, 0, 1].into_iter().map(|c| FsFr::from_u64(c)).collect();
+    let mut poly2_coeffs: Vec<FsFr> =
+        vec![0, 5, 0, 4, 34, 1].into_iter().map(|c| FsFr::from_u64(c)).collect();
 
     // choose a large prime number closest to `u64::MAX`
     let prime_num = 18446744073709551557_u64;

@@ -276,7 +276,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "kzg_cookbook"
+name = "kzg_playground"
 version = "0.1.0"
 dependencies = [
  "kzg",
