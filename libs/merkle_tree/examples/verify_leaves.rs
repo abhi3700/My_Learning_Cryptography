@@ -12,15 +12,11 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // vec of 32 bytes i.e. effectively each bytes is a Hash
     // which is represented as bytes array like [128, 56, 89, ..]
-    let leaves_bytes: Vec<[u8; 32]> = leaf_values
-        .iter()
-        .map(|x| Sha256::hash(x.as_bytes()))
-        .collect();
+    let leaves_bytes: Vec<[u8; 32]> =
+        leaf_values.iter().map(|x| Sha256::hash(x.as_bytes())).collect();
     dbg!("Hashes (in bytes) of leaves: {:#?}", &leaves_bytes);
-    let leaves_hashes: Vec<String> = leaves_bytes
-        .iter()
-        .map(|x| format!("0x{}", hex::encode(x)))
-        .collect();
+    let leaves_hashes: Vec<String> =
+        leaves_bytes.iter().map(|x| format!("0x{}", hex::encode(x))).collect();
     println!("Hashes of leaves: {:#?}", leaves_hashes);
 
     let merkle_tree = MerkleTree::<Sha256>::from_leaves(&leaves_bytes);
@@ -33,7 +29,8 @@ fn main() -> Result<(), Box<dyn Error>> {
     // Serialize proof to pass it to the client
     let proof_bytes = merkle_proof.to_bytes();
     println!("Proof size: {:?} bytes", proof_bytes.len());
-    // This has to be parsed in contract's function after generating this offline (via cloud based setup)
+    // This has to be parsed in contract's function after generating this offline
+    // (via cloud based setup)
     let proof_hashes = merkle_proof.proof_hashes_hex();
     println!("Proof array (in hashes): {:?}", proof_hashes);
     println!("Proof array len: {:?}", proof_hashes.len());
