@@ -52,20 +52,20 @@
 - zk-SNARK stands for zero-knowledge **S**uccinct (because of small proof size & lesser verification time) **N**on-interactive (no back & forth communication needed b/w prover & verifier) **AR**gument of **K**nowledge.
   > - Succinct: small proof size & lesser verification time
   > - Non-interactive: no back & forth communication needed b/w prover & verifier. This means when the prover submits the proof, the verifier can verify it without any further communication.
-- Schemes in zk-SNARK are:
-  - Groth16 (smallest & fastest to verify)
-  - Libra
-  - Sonic
-  - SuperSonic
-  - PlonK
-  - SLONK
-  - Halo (Halo 2 ❌ trusted setup)
-  - Marlin
-  - Fractal
-  - Spartan
-  - Succinct Aurora,
-  - RedShift,
-  - AirAssembly
+  <!-- - Schemes in zk-SNARK are:
+    - Groth16 (smallest & fastest to verify)
+    - Libra
+    - Sonic
+    - SuperSonic
+    - PlonK
+    - SLONK
+    - Halo (Halo 2 ❌ trusted setup)
+    - Marlin
+    - Fractal
+    - Spartan
+    - Succinct Aurora,
+    - RedShift,
+    - AirAssembly -->
 - SNARK can have both trusted or transparent setup. But, the most successful SNARKs are the ones with trusted setup. That's why it's commonly related with trusted setup. zk-SNARKs with trusted setup are more efficient than zk-SNARKs with transparent setup or zk-SNARKs in ROM.
   ![](../../img/zkp-snark-protocols-comparo.png)
   > There are two type of setup: **trusted setup** and **transparent (public) setup**. In a trusted setup, we have a trapdoor that we should keep it secret and if attacker got it, she can prove false statements. Trusted setup should be **run once by a trusted third party**. In a **transparent** setup, **there is no such secret**. Examples of zk-SNARK frameworks with trusted setup are Pinocchio and Zcash's zk-SNARK and examples of zk-SNARKs with transparent setup are [DARK](https://eprint.iacr.org/2021/358) and Spartan, etc. [Source](https://crypto.stackexchange.com/a/89491/106338)
