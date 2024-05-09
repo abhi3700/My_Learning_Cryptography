@@ -77,3 +77,5 @@
 - [Noir W3C Verifiable Credentials](https://github.com/Noir-W3C-Verifiable-Credentials/protocol-core)
 - [Awesome Noir](https://github.com/noir-lang/awesome-noir/tree/main#benchmarks)
 - [ ] KZG polynomial commitment in Noir
+- [ZKCamp's Aztec Noir Course](https://github.com/ZKCamp/aztec-noir-course) 🌟🌟🌟
+  > Learn theory to practical coding.
