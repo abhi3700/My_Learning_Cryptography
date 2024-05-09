@@ -74,8 +74,15 @@
 
 ## Resources
 
-- [Noir W3C Verifiable Credentials](https://github.com/Noir-W3C-Verifiable-Credentials/protocol-core)
 - [Awesome Noir](https://github.com/noir-lang/awesome-noir/tree/main#benchmarks)
+- [Noir Starter](https://github.com/noir-lang/noir-starter)
+- [Noir W3C Verifiable Credentials](https://github.com/Noir-W3C-Verifiable-Credentials/protocol-core)
 - [ ] KZG polynomial commitment in Noir
+- Examples/Usage:
+  - [Noir implementation of BattleZips circuits](https://github.com/BattleZips/BattleZips-Noir) with [Video Series](https://www.youtube.com/playlist?list=PLWACGbvIsEgnR2aUCr9i-PpmTVhF5Zuik)
+  - [Private Voting](https://github.com/noir-lang/noir-examples/blob/master/foundry-voting)
+  - [Stealthdrop](https://github.com/noir-lang/noir-examples/blob/master/stealthdrop)
+  - [Recursion](https://github.com/noir-lang/noir-examples/blob/master/recursion)
+- [ecrecover-noir](https://github.com/colinnielsen/ecrecover-noir)
 - [ZKCamp's Aztec Noir Course](https://github.com/ZKCamp/aztec-noir-course) 🌟🌟🌟
   > Learn theory to practical coding.
