@@ -1,5 +1,35 @@
 # Noir
 
+## Features
+
+**Cairo vs Noir**:
+
+- Both are made for L2s to use like batching executions & prove together.
+- Cairo is not for privacy,  but Noir is.
+- Both langs were introduced in 2022.
+- *Interaction:* In cairo, contracts can call each other asynchronously with the underlying L1. In noir, it has its own network - Aztec where all data can be declared public or private unlike in cairo (only public). Contracts can synchronously interact with other contract on L1.
+  - Async vs Sync: trade b/w L1 & L2 in 1 block
+
+      Asynchronously vs synchronously. It’s a huge difference. A Noir contract in the Aztec network can, for example, call a L1 DeFi contract to execute a trade and receive the assets back — all in one transaction. Faster flash bots possibility here considering the network congestion on L1.
+
+- *Verifier:* Noir generates Solidity verifier contract unlike Cairo.
+- Tooling: Cairo has more developer tooling. But Noir has `nargo` & also has foundry support to write tests for the verifier contract.
+
+## Installation
+
+> On macOS M1.
+
+Noir CLI:
+
+```sh
+# Install noirup
+curl -L https://raw.githubusercontent.com/noir-lang/noirup/main/install | zsh
+# install nargo
+noirup
+```
+
+## Getting Started
+
 1. `$ nargo new hello`
 2. `$ cd hello`
 3. `$ nargo check`: Checks the constraint system for errors. Also generates Prover, Verifier `.toml` files with empty values like this:
@@ -71,6 +101,12 @@
 | hello   | PLONKCSat { width: 3 } | 5            | 5                    |
 +---------+------------------------+--------------+----------------------+
 ```
+
+## Deploy
+
+Deploy the verifier contract to network.
+
+Follow this [README guide](https://github.com/noir-lang/noir-starter/blob/main/with-foundry).
 
 ## Resources
 
