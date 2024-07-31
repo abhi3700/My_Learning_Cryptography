@@ -147,6 +147,10 @@ Here are the examples/case studies:
 - [ZKP](https://en.wikipedia.org/wiki/Zero-knowledge_proof)
 - [zk-snark in _Rust_](https://github.com/zkcrypto/bellman)
 
+### Books
+
+- [Building Cryptographic Proofs from Hash Functions](https://github.com/hash-based-snargs-book/hash-based-snargs-book/blob/main/snargs-book.pdf)
+
 ### Blogs
 
 - [Everything I know about ZKP](https://wiki.nikiv.dev/security/cryptography/zero-knowledge-proofs)
