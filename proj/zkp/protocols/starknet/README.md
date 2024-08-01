@@ -79,3 +79,11 @@ Starknet's transaction lifecycle:
 ## References
 
 - [Understanding Zero-Knowledge Proofs in 15 Mins through SNARK and STARK](https://intelchen.medium.com/understanding-zero-knowledge-proofs-in-15-mins-through-snark-and-stark-7638311f0cc9) 🧑🏻‍💻
+- Series | recommended by Starknet on Discord
+  1. Intro to cryptography (<https://cs.umd.edu/~waa/414-F11/IntroToCrypto.pdf>)
+  2. How does Plonk work (<https://youtube.com/watch?v=RUZcam_jrz0&t=0s>)
+  3. ZK-composition and recursion (<https://youtube.com/watch?v=6mcCyQXm8vo&list=PLBJMt6zV1c7GeKkR2SUhzx9KSJ9TsEx6n>)
+  4. <http://zk-learning.org/>
+  5. Arithmetization I (<https://medium.com/starkware/arithmetization-i-15c046390862>)
+  6. Arithmetization II (<https://medium.com/starkware/arithmetization-ii-403c3b3f4355>)
+  7. STARK 101 (<https://starkware.co/stark-101/>)

@@ -2,6 +2,7 @@
 
 ## About
 
+- Permissionless, Distributed computer.
 - Lightweight, fast, and secure blockchain protocol.
 - uses zk-SNARKs for scalability, security and privacy.
 - maintained by [o1-labs](https://github.com/o1-labs)
