@@ -150,6 +150,9 @@ Here are the examples/case studies:
 ### Books
 
 - [Building Cryptographic Proofs from Hash Functions](https://github.com/hash-based-snargs-book/hash-based-snargs-book/blob/main/snargs-book.pdf)
+- RareSkills
+  - <https://www.rareskills.io/zk-book>, [Github](https://github.com/RareSkills/zk-book/tree/prod)
+    > Just go through this book. To the point.
 
 ### Blogs
 
