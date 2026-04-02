@@ -3,5 +3,6 @@ members = [
     "libs/merkle_tree",
     "libs/ecc",
     "libs/kzg_playground",
+    "libs/halo2-rs",
 ]
 resolver = "2"

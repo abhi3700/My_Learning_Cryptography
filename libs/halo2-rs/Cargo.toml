@@ -1,0 +1,14 @@
+[package]
+name = "halo2-rs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ff = "0.13.1"
+rand = "0.10.0"
+rand_chacha = "0.10.0"
+halo2_proofs = { git = "https://github.com/privacy-scaling-explorations/halo2", tag = "v0.4.0" }
+
+[[example]]
+name = "halo"
+path = "examples/halo.rs"
