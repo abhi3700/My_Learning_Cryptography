@@ -1,4 +1,6 @@
-use halo2_proofs::poly::kzg::multiopen::ProverSHPLONK;
+use halo2_proofs::poly::kzg::multiopen::{ProverSHPLONK, VerifierSHPLONK};
+use halo2_proofs::poly::kzg::strategy::SingleStrategy;
+use halo2_proofs::transcript::{Blake2bRead, TranscriptReadBuffer};
 use halo2_proofs::{
     circuit::{SimpleFloorPlanner, Value},
     halo2curves::bn256::{Bn256, Fr, G1Affine},
@@ -134,11 +136,11 @@ fn main() {
     let y = x.square() + Fr::from(3);
     let circuit = SquarePlusThreeCircuit { x: Value::known(x) };
 
-    // let mut rng = rng();
     let mut rng = OsRng;
     let public_inputs = vec![vec![y]];
 
-    let mut transcript = Blake2bWrite::<Vec<u8>, G1Affine, Challenge255<G1Affine>>::init(vec![]);
+    let mut transcript =
+        Blake2bWrite::<Vec<u8>, G1Affine, Challenge255<G1Affine>>::init(Vec::new());
 
     halo2_proofs::plonk::create_proof::<
         halo2_proofs::poly::kzg::commitment::KZGCommitmentScheme<Bn256>,
@@ -147,6 +149,34 @@ fn main() {
         _,
         _,
         _,
-    >(&params, &pk, &[circuit], &[public_inputs], &mut rng, &mut transcript)
+    >(&params, &pk, &[circuit], &[public_inputs.clone()], &mut rng, &mut transcript)
     .expect("proof generation should succeed");
+
+    let proof = transcript.finalize();
+
+    std::fs::write("square_plus_three.proof", &proof).expect("should write proof file");
+
+    println!("Proof generated: {} bytes", proof.len());
+    println!("Saved to: square_plus_three.proof");
+    println!("Proof bytes: {:02x?}", proof);
+
+    // ===== verification
+
+    let proof_from_file = std::fs::read("square_plus_three.proof").expect("should read proof file");
+    let mut verifier_transcript =
+        Blake2bRead::<_, G1Affine, Challenge255<G1Affine>>::init(&proof_from_file[..]);
+    let strategy = SingleStrategy::new(&params.verifier_params());
+
+    halo2_proofs::plonk::verify_proof::<
+        halo2_proofs::poly::kzg::commitment::KZGCommitmentScheme<Bn256>,
+        VerifierSHPLONK<Bn256>,
+        _,
+        _,
+        _,
+    >(
+        &params.verifier_params(), pk.get_vk(), strategy, &[public_inputs], &mut verifier_transcript
+    )
+    .expect("proof verification should succeed");
+
+    println!("Proof verification succeeded");
 }
