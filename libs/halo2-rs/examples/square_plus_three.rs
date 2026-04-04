@@ -1,9 +1,12 @@
+use halo2_proofs::poly::kzg::multiopen::ProverSHPLONK;
 use halo2_proofs::{
     circuit::{SimpleFloorPlanner, Value},
-    halo2curves::pasta::Fp,
-    plonk::{self, Advice, Circuit, Column, Instance, Selector},
-    poly::Rotation,
+    halo2curves::bn256::{Bn256, Fr, G1Affine},
+    plonk::{self, keygen_pk, keygen_vk, Advice, Circuit, Column, Instance, Selector},
+    poly::{commitment::ParamsProver, kzg::commitment::ParamsKZG, Rotation},
+    transcript::{Blake2bWrite, Challenge255, TranscriptWriterBuffer},
 };
+use rand_core::OsRng;
 
 #[derive(Debug, Clone)]
 struct SquarePlusThreeConfig {
@@ -17,10 +20,10 @@ struct SquarePlusThreeConfig {
 #[derive(Default)]
 struct SquarePlusThreeCircuit {
     /// private witness
-    x: Value<Fp>,
+    x: Value<Fr>,
 }
 
-impl Circuit<Fp> for SquarePlusThreeCircuit {
+impl Circuit<Fr> for SquarePlusThreeCircuit {
     type Config = SquarePlusThreeConfig;
     type FloorPlanner = SimpleFloorPlanner;
 
@@ -28,7 +31,7 @@ impl Circuit<Fp> for SquarePlusThreeCircuit {
         Self { x: Value::unknown() }
     }
 
-    fn configure(meta: &mut halo2_proofs::plonk::ConstraintSystem<Fp>) -> Self::Config {
+    fn configure(meta: &mut halo2_proofs::plonk::ConstraintSystem<Fr>) -> Self::Config {
         let x = meta.advice_column();
         let t = meta.advice_column();
         let y = meta.advice_column();
@@ -40,7 +43,7 @@ impl Circuit<Fp> for SquarePlusThreeCircuit {
         meta.enable_equality(instance);
 
         // Enforce: y = x*x + 3
-        meta.create_gate("square plus thress", |meta| {
+        meta.create_gate("square plus three", |meta| {
             let q = meta.query_selector(q_enable);
             let x_expr = meta.query_advice(x, Rotation::cur());
             let t_expr = meta.query_advice(t, Rotation::cur());
@@ -48,7 +51,7 @@ impl Circuit<Fp> for SquarePlusThreeCircuit {
 
             vec![
                 q.clone() * (x_expr.clone() * x_expr - t_expr.clone()),
-                q * (t_expr + plonk::Expression::Constant(Fp::from(3)) - y_expr),
+                q * (t_expr + plonk::Expression::Constant(Fr::from(3)) - y_expr),
             ]
         });
 
@@ -58,7 +61,7 @@ impl Circuit<Fp> for SquarePlusThreeCircuit {
     fn synthesize(
         &self,
         config: Self::Config,
-        mut layouter: impl halo2_proofs::circuit::Layouter<Fp>,
+        mut layouter: impl halo2_proofs::circuit::Layouter<Fr>,
     ) -> Result<(), halo2_proofs::plonk::ErrorFront> {
         let y_cell = layouter.assign_region(
             || "compute y = x^2 + 3",
@@ -67,7 +70,7 @@ impl Circuit<Fp> for SquarePlusThreeCircuit {
 
                 let x_val = self.x;
                 let t_val = x_val.map(|v| v * v);
-                let y_val = t_val.map(|v| v + Fp::from(3));
+                let y_val = t_val.map(|v| v + Fr::from(3));
 
                 region.assign_advice(|| "x", config.x, 0, || x_val)?;
                 region.assign_advice(|| "t", config.t, 0, || t_val)?;
@@ -90,13 +93,12 @@ mod tests {
 
     #[test]
     fn test_square_plus_three() {
-        let x = Fp::from(5);
-        let y = x.square() + Fp::from(3);
+        let x = Fr::from(5);
+        let y = x.square() + Fr::from(3);
 
         let circuit = SquarePlusThreeCircuit { x: Value::known(x) };
 
         let public_inputs = vec![vec![y]];
-        dbg!(&public_inputs);
         let k = 4;
 
         let prover = MockProver::run(k, &circuit, public_inputs).unwrap();
@@ -105,8 +107,8 @@ mod tests {
 
     #[test]
     fn test_invalid() {
-        let x = Fp::from(5);
-        let wrong_y = x.square() + Fp::from(999);
+        let x = Fr::from(5);
+        let wrong_y = x.square() + Fr::from(999);
 
         let circuit = SquarePlusThreeCircuit { x: Value::known(x) };
 
@@ -118,4 +120,33 @@ mod tests {
     }
 }
 
-const fn main() {}
+fn main() {
+    // params
+    let k = 4;
+    let params: ParamsKZG<Bn256> = ParamsKZG::new(k);
+
+    // keygen with empty circuit
+    let empty_circuit = SquarePlusThreeCircuit::default();
+    let vk = keygen_vk(&params, &empty_circuit).expect("vk");
+    let pk = keygen_pk(&params, vk, &empty_circuit).expect("pk");
+
+    let x = Fr::from(5);
+    let y = x.square() + Fr::from(3);
+    let circuit = SquarePlusThreeCircuit { x: Value::known(x) };
+
+    // let mut rng = rng();
+    let mut rng = OsRng;
+    let public_inputs = vec![vec![y]];
+
+    let mut transcript = Blake2bWrite::<Vec<u8>, G1Affine, Challenge255<G1Affine>>::init(vec![]);
+
+    halo2_proofs::plonk::create_proof::<
+        halo2_proofs::poly::kzg::commitment::KZGCommitmentScheme<Bn256>,
+        ProverSHPLONK<'_, Bn256>,
+        _,
+        _,
+        _,
+        _,
+    >(&params, &pk, &[circuit], &[public_inputs], &mut rng, &mut transcript)
+    .expect("proof generation should succeed");
+}
