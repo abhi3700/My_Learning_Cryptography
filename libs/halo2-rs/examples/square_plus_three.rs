@@ -1,3 +1,4 @@
+use halo2_proofs::plonk::VerifyingKey;
 use halo2_proofs::poly::kzg::multiopen::{ProverSHPLONK, VerifierSHPLONK};
 use halo2_proofs::poly::kzg::strategy::SingleStrategy;
 use halo2_proofs::transcript::{Blake2bRead, TranscriptReadBuffer};
@@ -130,7 +131,7 @@ fn main() {
     // keygen with empty circuit
     let empty_circuit = SquarePlusThreeCircuit::default();
     let vk = keygen_vk(&params, &empty_circuit).expect("vk");
-    let pk = keygen_pk(&params, vk, &empty_circuit).expect("pk");
+    let pk = keygen_pk(&params, vk.clone(), &empty_circuit).expect("pk");
 
     let x = Fr::from(5);
     let y = x.square() + Fr::from(3);
@@ -160,12 +161,20 @@ fn main() {
     println!("Saved to: square_plus_three.proof");
     println!("Proof bytes: {:02x?}", proof);
 
-    // ===== verification
-
+    // =====
     let proof_from_file = std::fs::read("square_plus_three.proof").expect("should read proof file");
-    let mut verifier_transcript =
-        Blake2bRead::<_, G1Affine, Challenge255<G1Affine>>::init(&proof_from_file[..]);
+
+    verify(&proof_from_file, params, vk);
+}
+
+/// verification
+fn verify(proof: &[u8], params: ParamsKZG<Bn256>, vk: VerifyingKey<G1Affine>) {
+    let mut verifier_transcript = Blake2bRead::<_, G1Affine, Challenge255<G1Affine>>::init(proof);
     let strategy = SingleStrategy::new(&params.verifier_params());
+
+    // let x = Fr::from(5);
+    // let y = x.square() + Fr::from(3);
+    let public_inputs = vec![vec![Fr::from(28)]];
 
     halo2_proofs::plonk::verify_proof::<
         halo2_proofs::poly::kzg::commitment::KZGCommitmentScheme<Bn256>,
@@ -173,9 +182,7 @@ fn main() {
         _,
         _,
         _,
-    >(
-        &params.verifier_params(), pk.get_vk(), strategy, &[public_inputs], &mut verifier_transcript
-    )
+    >(&params.verifier_params(), &vk, strategy, &[public_inputs], &mut verifier_transcript)
     .expect("proof verification should succeed");
 
     println!("Proof verification succeeded");
