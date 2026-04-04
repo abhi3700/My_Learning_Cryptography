@@ -163,18 +163,19 @@ fn main() {
 
     // =====
     let proof_from_file = std::fs::read("square_plus_three.proof").expect("should read proof file");
-
-    verify(&proof_from_file, params, vk);
+    let public_inputs = vec![vec![Fr::from(28)]];
+    verify(&proof_from_file, &params, &[public_inputs], &vk);
 }
 
 /// verification
-fn verify(proof: &[u8], params: ParamsKZG<Bn256>, vk: VerifyingKey<G1Affine>) {
+fn verify(
+    proof: &[u8],
+    params: &ParamsKZG<Bn256>,
+    instances: &[Vec<Vec<Fr>>],
+    vk: &VerifyingKey<G1Affine>,
+) {
     let mut verifier_transcript = Blake2bRead::<_, G1Affine, Challenge255<G1Affine>>::init(proof);
     let strategy = SingleStrategy::new(&params.verifier_params());
-
-    // let x = Fr::from(5);
-    // let y = x.square() + Fr::from(3);
-    let public_inputs = vec![vec![Fr::from(28)]];
 
     halo2_proofs::plonk::verify_proof::<
         halo2_proofs::poly::kzg::commitment::KZGCommitmentScheme<Bn256>,
@@ -182,7 +183,7 @@ fn verify(proof: &[u8], params: ParamsKZG<Bn256>, vk: VerifyingKey<G1Affine>) {
         _,
         _,
         _,
-    >(&params.verifier_params(), &vk, strategy, &[public_inputs], &mut verifier_transcript)
+    >(&params.verifier_params(), vk, strategy, instances, &mut verifier_transcript)
     .expect("proof verification should succeed");
 
     println!("Proof verification succeeded");
